@@ -1,16 +1,19 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "../src/components/Header";
 import Home from "../src/components/Home";
-import MovieDetails from "../src/components/MovieDetails";
+import Detail from "../src/components/Detail";
+
 function App() {
   return (
     <Router>
       <Header />
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/movie/:id" exact component={MovieDetails} />
+        <Route path="/movie/:id">
+          <Detail />
+        </Route>
       </Switch>
     </Router>
   );

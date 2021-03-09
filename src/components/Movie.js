@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 const IMG_API = "https://image.tmdb.org/t/p/w500";
 function Movie({ title, poster_path, id, vote_average }) {
-  console.log(IMG_API + poster_path);
   return (
     <Link to={`/movie/${id}`}>
       <div className="relative flex text-xl w-64 p-2 transform hover:scale-110 ">
